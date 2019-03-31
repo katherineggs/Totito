@@ -1,3 +1,5 @@
+#################################3
+###########################
 import random
 e = "E"
 r = "R"
@@ -47,6 +49,7 @@ while ganador == 0:
     if turno == jugador:
         print(jugador)
         posicion = input("Posicion: ")
+        h = 0
         if posicion not in var:
             print("Ubicacion invalida.")
             print(jugador)
@@ -54,6 +57,12 @@ while ganador == 0:
         for i in tab:
             for b in i:
                 for a in b:
+                    if a == x:
+                        h = h + 1
+                        print (h)
+                        if h == 3:
+                            print("Ganador", jugador)
+                            ganador = 1
                     if a == posicion:
                         tab = [[i.replace(a, ficha_1) for i in b] for b in tab]
                         print(tablero(tab))
@@ -61,9 +70,11 @@ while ganador == 0:
                             turno = player2
                         elif turno == player2:
                             turno = player1
+                    
     else:
         print(turno)
         posicion = input("Posicion: ")
+        j = 0
         if posicion not in var:
             print("Ubicacion invalida.")
             print(jugador)
@@ -71,6 +82,12 @@ while ganador == 0:
         for i in tab:
             for b in i:
                 for a in b:
+                    if a == o:
+                        j = j + 1
+                        print (jugador,j)
+                        if j == 3:
+                            print("Ganador", jugador)
+                            ganador = 1
                     if a == posicion:
                         tab = [[i.replace(a, ficha_2) for i in b] for b in tab]
                         print(tablero(tab))
@@ -78,11 +95,9 @@ while ganador == 0:
                             turno = player2
                         if turno == player2:
                             turno = player1
-                            print(e,r,t)
-                            print(tab[i.index(b)])
-    #                     if e == r and r == t:
-    #                         if e == ficha_1:
-    #                             print("Ganador", ficha_1)
+                    
+                        
+    #                     
     # for i in tab:
     #     for b in i:
     #         for c in var:
