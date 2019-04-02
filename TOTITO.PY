@@ -42,10 +42,8 @@ elif ficha_1 == "O" or ficha_1 == "o":
 else:
     print("Ficha invalida!")
 print(tablero(tab))
-
-ganador = 0
-turno = jugador
-while ganador == 0:
+def win(tab,ficha_1,ficha_2, jugador):
+    ganador = 0
     e = tab[1][0][2]
     r = tab[1][0][10]
     t = tab[1][0][17]
@@ -55,14 +53,61 @@ while ganador == 0:
     c = tab[7][0][2]
     v = tab[7][0][10]
     b = tab[7][0][17]
-    print(e,r,t,d,f,g,c,v,b)
     if e == r and r == t:
         if e == ficha_1:
             print("Ganador", jugador )
         elif e == ficha_2:
             print("Ganador", e)
         ganador = 1
-    elif turno == jugador:
+    if d == f and f == g:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    if c == v and v == b:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    if e == d and d == c:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    if r == f and f == v:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    if t == g and g == b:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    if e == f and f == b:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    if t == f and f == c:
+        if e == ficha_1:
+            print("Ganador", jugador )
+        elif e == ficha_2:
+            print("Ganador", e)
+        ganador = 1
+    return ganador
+
+ganador = 0
+turno = jugador
+while ganador == 0:
+    ganador = win(tab,ficha_1,ficha_2, jugador)
+    if turno == jugador:
         print(jugador)
         posicion = input("Posicion: ")
         h = 0
@@ -92,11 +137,10 @@ while ganador == 0:
             for b in i:
                 for a in b:
                     if a == posicion:
-                        print(b.index(a))
-                        print("")
                         tab = [[i.replace(a, ficha_2) for i in b] for b in tab]
                         print(tablero(tab))
                         if turno == player1:
                             turno = player2
-                        if turno == player2:
+                        elif turno == player2:
                             turno = player1
+    ganador = win(tab,ficha_1,ficha_2, jugador)
