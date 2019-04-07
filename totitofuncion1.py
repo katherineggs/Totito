@@ -2,6 +2,8 @@ player1 = input("Nombre jugador 1: ")
 ficha_1 = input("Que ficha desea? (X,O) ")
 player2 = input("Nombre jugador 2: ")
 def tottito_1(player1,player2,ficha_1):
+    print("OPCION 1")
+    print("Totito Normal")
     import random
     tab = [["      |      |      "],\
             ["  E   |   R  |   T  "],\
@@ -132,6 +134,5 @@ def tottito_1(player1,player2,ficha_1):
                                 turno = player1
         ganador = win(tab,ficha_1,ficha_2, jugador)
     return ""
-
 
 print(tottito_1(player1,player2,ficha_1))
