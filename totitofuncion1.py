@@ -1,7 +1,4 @@
-player1 = input("Nombre jugador 1: ")
-ficha_1 = input("Que ficha desea? (X,O) ")
-player2 = input("Nombre jugador 2: ")
-def tottito_1(player1,player2,ficha_1):
+def tottito_1():
     print("OPCION 1")
     print("Totito Normal")
     import random
@@ -21,10 +18,13 @@ def tottito_1(player1,player2,ficha_1):
         return ""
     x = "X"
     o = "O"
+    player1 = input("Nombre jugador 1: ")
+    player2 = input("Nombre jugador 2: ")
     print(tablero(tab))
     jugadores =[player1, player2]
     jugador = random.choice(jugadores)
     print("Inicia", jugador)
+    ficha_1 = input("Que ficha desea? (X,O) ")
     ficha_2 = ""
     if ficha_1 == "X" or ficha_1 == "x":
         ficha_2 = o
@@ -47,51 +47,51 @@ def tottito_1(player1,player2,ficha_1):
         b = tab[7][0][17]
         if e == r and r == t:
             if e == ficha_1:
-                print("Ganador", jugador )
+                print("ganador", jugador )
             elif e == ficha_2:
-                print("Ganador", e)
+                print("ganador", e)
             ganador = 1
         if d == f and f == g:
-            if e == ficha_1:
-                print("Ganador", jugador )
-            elif e == ficha_2:
-                print("Ganador", e)
+            if d == ficha_1:
+                print("ganador", jugador )
+            elif d == ficha_2:
+                print("ganador", d)
             ganador = 1
         if c == v and v == b:
-            if e == ficha_1:
-                print("Ganador", jugador )
-            elif e == ficha_2:
-                print("Ganador", e)
+            if c == ficha_1:
+                print("ganador", jugador )
+            elif c == ficha_2:
+                print("ganador", c)
             ganador = 1
         if e == d and d == c:
             if e == ficha_1:
-                print("Ganador", jugador )
+                print("ganador", jugador )
             elif e == ficha_2:
-                print("Ganador", e)
+                print("ganador", e)
             ganador = 1
         if r == f and f == v:
-            if e == ficha_1:
-                print("Ganador", jugador )
-            elif e == ficha_2:
-                print("Ganador", e)
+            if r == ficha_1:
+                print("ganador", jugador )
+            elif r == ficha_2:
+                print("ganador", r)
             ganador = 1
         if t == g and g == b:
-            if e == ficha_1:
-                print("Ganador", jugador )
-            elif e == ficha_2:
-                print("Ganador", e)
+            if t == ficha_1:
+                print("ganador", jugador )
+            elif t == ficha_2:
+                print("ganador", t)
             ganador = 1
         if e == f and f == b:
             if e == ficha_1:
-                print("Ganador", jugador )
+                print("ganador", jugador )
             elif e == ficha_2:
-                print("Ganador", e)
+                print("ganador", e)
             ganador = 1
         if t == f and f == c:
-            if e == ficha_1:
-                print("Ganador", jugador )
-            elif e == ficha_2:
-                print("Ganador", e)
+            if t == ficha_1:
+                print("ganador", jugador )
+            elif t == ficha_2:
+                print("ganador", t)
             ganador = 1
         return ganador
     ganador = 0
@@ -134,5 +134,3 @@ def tottito_1(player1,player2,ficha_1):
                                 turno = player1
         ganador = win(tab,ficha_1,ficha_2, jugador)
     return ""
-
-print(tottito_1(player1,player2,ficha_1))
