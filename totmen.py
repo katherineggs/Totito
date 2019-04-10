@@ -167,6 +167,7 @@ def tottito_1():
         if a == 9:
                ganador = 1
                print("NADIE GANO!")
+    print("Gracias por jugar!")
     return ""
 
 def totitofuncion2():
@@ -342,6 +343,7 @@ def totitofuncion2():
         if a == 9:
             ganador = 1
             print("NADIE GANO!")
+    print("Gracias por jugar!")
 
     return ""
 
@@ -515,17 +517,29 @@ def totitofuncion3():
         if a == 9:
                perdedor = 1
                print("NADIE GANO O PERDIO")
+    print("Gracias por jugar!")
     return ""
 
-print("___ TOTITO ___")
+print("____ TOTITO ____")
 print("")
 print("1. Jugador vs Jugador")
 print("2. Jugador vs PC")
 print("3. Totito Inverso")
-opcion = int(input("Que version desea jugar? "))
-if opcion == 1:
-    tottito_1()
-elif opcion == 2:
-    totitofuncion2()
-elif opcion == 3:
-    totitofuncion3()
+cont = "SI"
+while cont == "SI" or cont == "si" or cont == "Si":
+    print("____ TOTITO ____")
+    print("")
+    print("1. Jugador vs Jugador")
+    print("2. Jugador vs PC")
+    print("3. Totito Inverso")
+    opcion = int(input("Que version desea jugar? "))
+    if opcion == 1:
+        tottito_1()
+    elif opcion == 2:
+        totitofuncion2()
+    elif opcion == 3:
+        totitofuncion3()
+    else:
+        print("Version invalida!")
+        opcion = int(input("Que version desea jugar? "))
+    cont = input("Seguir jugando? ")
