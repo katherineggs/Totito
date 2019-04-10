@@ -520,11 +520,6 @@ def totitofuncion3():
     print("Gracias por jugar!")
     return ""
 
-print("____ TOTITO ____")
-print("")
-print("1. Jugador vs Jugador")
-print("2. Jugador vs PC")
-print("3. Totito Inverso")
 cont = "SI"
 while cont == "SI" or cont == "si" or cont == "Si":
     print("____ TOTITO ____")
