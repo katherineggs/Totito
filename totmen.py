@@ -94,6 +94,36 @@ def tottito_1():
                 print("ganador", t)
             ganador = 1
         return ganador
+    def tab_lleno():
+        a = 0
+        e = tab[1][0][2]
+        r = tab[1][0][10]
+        t = tab[1][0][17]
+        d = tab[4][0][2]
+        f = tab[4][0][10]
+        g = tab[4][0][17]
+        c = tab[7][0][2]
+        v = tab[7][0][10]
+        b = tab[7][0][17]
+        if e == x or e == o:
+               a= a +1
+               if r == x or r == o:
+                      a= a +1
+                      if t == x or t == o:
+                             a= a +1
+                             if d == x or d == o:
+                                    a= a +1
+                                    if f == x or f == o:
+                                           a= a +1
+                                           if g == x or g == o:
+                                                  a= a +1
+                                                  if c == x or c == o:
+                                                      a= a +1
+                                                      if v == x or v == o:
+                                                          a= a +1
+                                                          if b == x or b == o:
+                                                              a= a +1
+        return a
     ganador = 0
     turno = jugador
     while ganador == 0:
@@ -133,6 +163,10 @@ def tottito_1():
                             elif turno == player2:
                                 turno = player1
         ganador = win(tab,ficha_1,ficha_2, jugador)
+        a = tab_lleno()
+        if a == 9:
+               ganador = 1
+               print("NADIE GANO!")
     return ""
 
 def totitofuncion2():
@@ -238,7 +272,37 @@ def totitofuncion2():
                 print("ganador", t)
             ganador = 1
         return ganador
-
+    def tab_lleno():
+        a = 0
+        e = tab[1][0][2]
+        r = tab[1][0][10]
+        t = tab[1][0][17]
+        d = tab[4][0][2]
+        f = tab[4][0][10]
+        g = tab[4][0][17]
+        c = tab[7][0][2]
+        v = tab[7][0][10]
+        b = tab[7][0][17]
+        if e == x or e == o:
+               a= a +1
+               if r == x or r == o:
+                      a= a +1
+                      if t == x or t == o:
+                             a= a +1
+                             if d == x or d == o:
+                                    a= a +1
+                                    if f == x or f == o:
+                                           a= a +1
+                                           if g == x or g == o:
+                                                  a= a +1
+                                                  if c == x or c == o:
+                                                         a= a +1
+                                                         if v == x or v == o:
+                                                                a= a +1
+                                                                if b == x or b == o:
+                                                                       a= a +1
+        return a
+        
     ganador = 0
     turno = comp
     while ganador == 0:
@@ -274,6 +338,11 @@ def totitofuncion2():
                             elif turno == comp:
                                 turno = player1
         ganador = win(tab,ficha_1,ficha_2, player1)
+        a = tab_lleno()
+        if a == 9:
+            ganador = 1
+            print("NADIE GANO!")
+
     return ""
 
 def totitofuncion3():
@@ -373,6 +442,36 @@ def totitofuncion3():
                 print("Perdedor", t)
             perdedor = 1
         return perdedor
+    def tab_lleno():
+        a = 0
+        e = tab[1][0][2]
+        r = tab[1][0][10]
+        t = tab[1][0][17]
+        d = tab[4][0][2]
+        f = tab[4][0][10]
+        g = tab[4][0][17]
+        c = tab[7][0][2]
+        v = tab[7][0][10]
+        b = tab[7][0][17]
+        if e == x or e == o:
+               a= a +1
+               if r == x or r == o:
+                      a= a +1
+                      if t == x or t == o:
+                             a= a +1
+                             if d == x or d == o:
+                                    a= a +1
+                                    if f == x or f == o:
+                                           a= a +1
+                                           if g == x or g == o:
+                                                  a= a +1
+                                                  if c == x or c == o:
+                                                         a= a +1
+                                                         if v == x or v == o:
+                                                                a= a +1
+                                                                if b == x or b == o:
+                                                                       a= a +1
+        return a
     perdedor = 0
     turno = jugador
     while perdedor == 0:
@@ -412,6 +511,10 @@ def totitofuncion3():
                             elif turno == player2:
                                 turno = player1
         perdedor = loser(tab,ficha_1,ficha_2, jugador)
+        a = tab_lleno()
+        if a == 9:
+               perdedor = 1
+               print("NADIE GANO O PERDIO")
     return ""
 
 print("___ TOTITO ___")
